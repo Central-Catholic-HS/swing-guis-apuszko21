@@ -1,0 +1,19 @@
+package com.company;
+import jdk.nashorn.internal.scripts.JO;
+
+import javax.swing.JOptionPane;
+
+public class diceGUI {
+
+    public static void main(String[] args) {
+        String input0;
+        String input1;
+	    input0 = JOptionPane.showInputDialog("How many sides on the die?");
+	    input1 = JOptionPane.showInputDialog("How many dice?");
+	    int dieSides = Integer.parseInt(input0);
+	    int numDice = Integer.parseInt(input1);
+
+	    int roll = (int)(Math.random()*(dieSides*numDice-numDice)+numDice);
+	    JOptionPane.showMessageDialog(null, "The dice rolled " + roll);
+    }
+}
